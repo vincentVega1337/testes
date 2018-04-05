@@ -6,14 +6,14 @@ package com.skylite.test.collection;
  *
  * @author vi.fu.ve.ri.th@gmail.com
  */
-class Item {
+public class Item {
     private Object object;
 
     private Item previous;
 
     private Item next;
 
-    Item(Object object) {
+    public Item(Object object) {
         this.object = object;
         previous = null;
         next = null;
