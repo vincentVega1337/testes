@@ -35,7 +35,7 @@ public class FifoStack {
             return;
         }
         Item newItem = new Item(object);
-        this.last.next = newItem;   // Set link with current last and new element
+        this.last.setNext(newItem);   // Set link with current last and new element
         newItem.setPrevious(this.last); // Set link with current last and new element
         this.last = newItem;    // Set new element as last in queue
         currentSize++;
@@ -51,7 +51,7 @@ public class FifoStack {
             return null;
         }
         Item item = this.first;
-        this.first = item.next;
+        this.first = item.getNext();
         currentSize--;
         return item.getObject();
     }
@@ -72,55 +72,13 @@ public class FifoStack {
         StringBuilder sb = new StringBuilder();
         Item item = this.first;
         while (item != null) {
-            sb.append(item.object.toString()).append(" ");
-            item = item.next;
+            sb.append(item.getObject().toString()).append(" ");
+            item = item.getNext();
         }
         return sb.toString();
     }
 
-    /**
-     * Class realise  item object
-     * Contains object, and links to next and previous element
-     *
-     * @author vi.fu.ve.ri.th@gmail.com
-     */
-    protected class Item {
-        private Object object;
 
-        private Item previous;
-
-        private Item next;
-
-        Item(Object object) {
-            this.object = object;
-            previous = null;
-            next = null;
-        }
-
-        public Object getObject() {
-            return object;
-        }
-
-        public void setObject(Object object) {
-            this.object = object;
-        }
-
-        public Item getPrevious() {
-            return previous;
-        }
-
-        public void setPrevious(Item previous) {
-            this.previous = previous;
-        }
-
-        public Item getNext() {
-            return next;
-        }
-
-        public void setNext(Item next) {
-            this.next = next;
-        }
-    }
 
 
 }
