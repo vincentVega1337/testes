@@ -3,6 +3,7 @@ package com.skylite.test;
 import com.skylite.test.collection.DEQStack;
 import com.skylite.test.collection.FifoStack;
 import com.skylite.test.collection.LifoStack;
+import com.skylite.test.sortAlgorithms.InsertionSort;
 import com.skylite.test.sortAlgorithms.SelectionSort;
 
 import java.util.Arrays;
@@ -12,7 +13,8 @@ public class Demo {
 //        FIFODemo();
 //        LIFODemo();
 //        DEQDemo();
-        SelectionDemo();
+//        SelectionDemo();
+        InsertDemo();
     }
 
     private static void FIFODemo() {
@@ -51,6 +53,13 @@ public class Demo {
         int[] container = new int[]{123, 545, 23, 65, 12, 76, 56, 233, 56,};
         System.out.println(Arrays.toString(container));
         SelectionSort.Sort(container);
+        System.out.println(Arrays.toString(container));
+    }
+
+    private static void InsertDemo() {
+        int[] container = new int[]{123, 545, 23, 65, 12, 76, 56, 233, 56,};
+        System.out.println(Arrays.toString(container));
+        InsertionSort.Sort(container);
         System.out.println(Arrays.toString(container));
     }
 }
