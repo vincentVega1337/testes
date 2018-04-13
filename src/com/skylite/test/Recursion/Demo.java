@@ -7,7 +7,7 @@ public class Demo {
 
     public static void main(String[] args) {
         System.out.println(RecursionUnit.factorial(6));
-        System.out.println(RecursionUnit.arraySum(new int[]{5, 4, 3, 2, 1}, 0) + ", but must be 15");
+        System.out.println(RecursionUnit.arraySum(RecursionUnit.generateArray(10), 0) + ", but must be 15");
         int[] testArray = new int[]{1, 2, 4, 5, 6, 7, 8, 9};
         System.out.println("Index of 9: " + RecursionUnit.binSearch(testArray, 9, 0, testArray.length - 1));
         int[] array = RecursionUnit.generateArray(100000);
